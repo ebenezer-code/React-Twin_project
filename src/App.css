@@ -1,0 +1,676 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+    input {
+        width: 60vw;
+        margin-left: 30px;
+    }
+    select {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 485px) {
+   header {
+       font-size: 1rem;
+       font-family: monospace;
+       margin-left: 20px;
+   }
+}
+body {
+    background-image: linear-gradient(70deg, #2ece1f65, #849927);
+    color: rgba(255, 255, 255, 0.596);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+header, form {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background: white;
+    padding: .7rem;
+}
+.todo-input {
+    padding-left: 1.5rem;
+}
+form button {
+    color: #849927;
+    background: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+    background: #0d360c;
+    color: whitesmoke;
+}
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+.todo {
+    margin: .5rem;
+    background: white;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: .2rem;
+    
+}
+
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background:  #db1626;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn {
+    background: rgba(154, 189, 0, 0.856);
+}
+.todo-item {
+    padding: 0rem .5rem;
+}
+.fa-trash, .fas-check {
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall {
+    transform: translateY(7rem) rotateZ(40deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+select {
+    color: #6fcc22;
+    width: 9rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #56ac3c;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after {
+    background: white;
+    color: #56ac3c;
+    
+}
+option {
+    background: rgb(109, 130, 89);
+    font-family: monospace;
+    font-size: 1rem;
+}
+.b-img {
+    height: 60px;
+    border-radius: 10px;
+}
+.main {
+    background: pink;
+    width: 30vw;
+    height: 100%;
+    margin: auto 400px;
+    margin-bottom: 20px !important;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 30px 20px 40px rgb(0,0,0,0.3);
+}
+.person-h2 {
+    padding-left: 30px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: palevioletred;
+}
+.person-div {
+    display: flex;
+    padding: 23px;
+    margin: auto;
+    
+}
+.p {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: 0;
+}
+.person-div button {
+    letter-spacing: 0;
+    border: transparent;
+    background: transparent;
+    color: rgba(255, 0, 204, 0.413);
+    margin-left: 50px;
+    font-family: monospace;
+    padding: 0;
+    height: 20px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.person-div h2{
+    padding-left: 10px;
+    font-family: monospace;
+}
+.person-div button:hover {
+    color: crimson;
+    transition: 1s all ease;
+}
+.clear {
+    position: relative;
+    font-size: 1rem;
+    font-family: cursive;
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 20vw;
+    height: 40px;
+    color: white;
+    border: none;
+    background: rgb(211, 108, 125);
+    border-radius: 5px;
+}
+.clear:hover{
+    background: rgba(97, 47, 47, 0.701);
+    transition: .8s all ease-in-out;
+}
+@media screen and (max-width: 780px) {
+    .main {
+        width: 50vw;
+        margin: auto 180px;
+        display: none;
+    }
+    .clear {
+        margin-left: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+constructor() {
+        super();
+    }
+
+    render() {
+        return (
+           <div>
+               <Header />
+               <Memesection />
+           </div>
+        )
+    }
+
+import img from './img.jpg'
+
+class Header extends React.Component {
+    constructor() {
+        super()
+    }
+
+    render() {
+        return (
+            <div>
+                <header>
+                    <img className = "img" src={img} alt="Problem?" />
+                    <p>Meme Generator</p>
+                </header>
+            </div>
+        )
+    }
+}
+class Memesection extends React.Component{
+    constructor() {
+        super()
+        this.state = {
+            topText: "",
+            bottomText: "",
+            randomImg: "https://api.imgflip.com/get_memes",
+            allMemeImages: []
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        fetch("https://api.imgflip.com/get_memes")
+        .then(response => response.json())
+        .then(response => {
+            const {memes} = response.data
+            this.setState({
+                allMemeImages: memes
+            })
+        })
+    }
+    handleChange(event) {
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        })
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+        const randNum = Math.floor(Math.random() * this.state.allMemeImages.length)
+        const randMemeImg = this.state.allMemeImages[randNum].url;
+        this.setState ({
+            randomImg: randMemeImg
+        })
+
+    }
+    
+    render() {
+        return (
+            <div>
+                <form className = "meme-form"onSubmit = {this.handleSubmit}>
+                <input 
+                type="text" 
+                name = "topText" 
+                value = {this.state.topText}
+                placeholder = "Enter Top Text"
+                onChange = {this.handleChange}/>
+
+                <input 
+                type="text" 
+                name = "bottomText" 
+                value = {this.state.bottomText}
+                placeholder = "Enter Bottom Text"
+                onChange = {this.handleChange}/>
+
+                <button onClick = {this.handleSubmit}>GEN</button>
+                </form>
+
+                <div className ="meme">
+                    <img src={this.state.randomImg} alt="" />
+                    <h2 className = "top">{this.state.topText}</h2>
+                    <h2 className = "bottom">{this.state.bottomText}</h2>
+                </div>
+            </div>
+        )
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    margin: 0;
+    padding: 0;
+}
+ header section
+header{
+    --header-color: rgba(128, 0, 128, 0.755);
+    
+}
+
+header{
+     background:  var(--header-color);
+     height: 25vh;
+     width: 100vw;
+     font-family: monospace;
+     font-size: 40px;
+     font-weight: 600;
+}
+.img {
+    height: 50px;
+    width: 50px;
+    border: 12px solid rgba(128, 0, 128, 0.07);
+    border-radius: 30px;
+    cursor: pointer;
+}
+p{
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    float: right;
+    padding-left: 8px;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+Meme genaration section
+.meme-form {
+    margin-top: 20px;
+    height: 60vh;
+    width: 80vw;
+   padding: 20px 5px 20px 40px;
+}
+input {
+    display: inline-flex;
+    height: 30px;
+    width: 30vw;
+    margin: 2px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid silver;
+    text-decoration: none;
+    border-radius: 5px;
+}
+input[type = "text"]{
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: bold;
+}
+input[value]{
+    font-family: monospace;
+    font-weight: bold;
+}
+button {
+   padding: .8rem;
+   border-radius: 5px;
+   border: 2px solid silver;
+   background: rgba(128, 0, 128, 0.755); 
+
+}
+button:hover {
+    color: rgba(128, 0, 128, 0.755);
+    background: #fff;
+    font-family: sans-serif;
+    transition: all .8s ease;   
+}
+@media screen and (max-width: 375px) {
+   .meme-form {
+        margin-top: 20px;
+        height: 80vh;
+        width: 50vw;
+       padding: 20px 5px 20px 40px;
+    }
+    input {
+        display: inline-flex;
+        height: 30px;
+        width: 40vw;
+        margin: 3px;
+        padding: 6px;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 5px;
+    }
+    button {
+        padding: .5rem;
+        position: relative;
+        float: center;
+        margin-top: 10px;
+        margin-left: 180px;
+        bottom: 10vh;
+        border-radius: 5px;
+        border: 2px solid silver;
+        background: rgba(128, 0, 128, 0.755);   
+     }
+     button:hover{
+         color: rgba(128, 0, 128, 0.755);
+         background: #fff;
+         transition: all .5s ease-in-out;
+     }
+     
+p{
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    float: right;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    position: relative;
+    font-size: 20px;
+}
+}
+
+
+/*Meme section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
